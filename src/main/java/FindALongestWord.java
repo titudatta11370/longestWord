@@ -4,17 +4,17 @@ public class FindALongestWord {
 
     public static void getLongestString() {
 
-        Scanner ob = new Scanner(System.in);
-        System.out.println("Enter a sentence : ");
-        String sent = ob.nextLine();
-        Scanner st = new Scanner(sent);
+        Scanner Object = new Scanner(System.in);
+        System.out.println("Enter a sentence : "); //get the sentence from the user
+        String sent = Object.nextLine();
+        Scanner scanner = new Scanner(sent);
         int length = 0;
         String longest = "";
-        while (st.hasNext()) {
-            String word = st.next();
+        while (scanner.hasNext()) {
+            String word = scanner.next();
             if (word.length() > length) {
-                length = word.length();
-                longest = word;
+                length = word.length(); // gets the longest length
+                longest = word; // gets the longest word
             }
         }
         System.out.println("The longest word is " + longest);
